@@ -75,12 +75,16 @@ WSGI_APPLICATION = 'cloud_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+DB_USER = os.environ.get('DB_USER')
+DB_PASS = os.environ.get('DB_PASS')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'cloud_db',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
+        # 'USER': 'admin',
+        # 'PASSWORD': 'admin',
+        'USER': DB_USER,
+        'PASSWORD': DB_PASS,
         'HOST': 'localhost',
         'POSRT': '3306'
     }
