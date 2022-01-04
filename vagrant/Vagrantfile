@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/bionic64"
   config.vm.provision "file", source: "../project", destination: "$HOME/CloudProject/project" #prebacivanje projekta
   config.vm.provision "shell", path:"docker_script.sh" #kad se pokrene vagrant up sa provision pokrenuce skriptu gde smo naveli 
-  # config.vm.provision "shell", path:"script.sh"
+  config.vm.provision "shell", path:"script.sh"
   #ZADATAK prebaciti django projekat u vagrant i instalirati poetry preko provision
 
 

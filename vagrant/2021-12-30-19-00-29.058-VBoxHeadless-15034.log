@@ -1,6 +1,6 @@
-Log created: 2021-12-15T08:48:27.588000000Z
-Process ID:  22465 (0x57c1)
-Parent PID:  1605 (0x645)
+Log created: 2021-12-30T19:00:29.584641000Z
+Process ID:  15034 (0x3aba)
+Parent PID:  2920 (0xb68)
 Executable:  /usr/lib/virtualbox/VBoxHeadless
 Arg[0]: /usr/lib/virtualbox/VBoxHeadless
 Arg[1]: --comment

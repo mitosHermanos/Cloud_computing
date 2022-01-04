@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 KEY = os.environ.get('SECRET_KEY')
 SECRET_KEY = KEY
-
+# SECRET_KEY = "itde^2&op#=p3n-5l&=ky(@3x&l)78&o6b&iyj721yssp(d^fy"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -80,14 +80,14 @@ DB_USER = os.environ.get('DB_USER')
 DB_PASS = os.environ.get('DB_PASS')
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'cloud_db',
         # 'USER': 'admin',
         # 'PASSWORD': 'admin',
         'USER': DB_USER,
         'PASSWORD': DB_PASS,
-        'HOST': 'localhost',
-        'POSRT': '3306'
+        'HOST': 'postgres_db',
+        'PORT': '5432'
     }
 }
 
