@@ -23,4 +23,4 @@ services:
             - POSTGRES_DB=cloud_db
         
 volumes: 
-    postgres_data:
+    postgres_data: 
