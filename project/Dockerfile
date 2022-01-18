@@ -21,4 +21,4 @@ COPY requirenments.txt .
 RUN pip install -r requirenments.txt 
 COPY cloud_project/ .
 
-CMD python ma
+CMD python manage.py makemigrations & python manage.py migrate & python manage.py runserver 0.0.0.0:8000
