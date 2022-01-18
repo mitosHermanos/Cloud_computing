@@ -1,11 +1,22 @@
 version: "3.7"
 
 services: 
-    django:
+    django1:
         build: .
         restart: on-failure:10
         ports: 
             - "8000:8000"
+        env_file: 
+            - ../vagrant/vars.env
+        depends_on: 
+            - postgres_db
+        volumes: 
+            - ./project/:/usr/src/project
+    django2:
+        build: .
+        restart: on-failure:10
+        ports: 
+            - "8001:8000"
         env_file: 
             - ../vagrant/vars.env
         depends_on: 
@@ -21,6 +32,7 @@ services:
             - POSTGRES_USER=admin
             - POSTGRES_PASSWORD=admin
             - POSTGRES_DB=cloud_db
+    
         
 volumes: 
     postgres_data: 
