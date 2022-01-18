@@ -9,7 +9,7 @@ RUN apt update
 # RUN apk add postgresql-dev gcc python3-dev musl-dev
 # install dependencies
 RUN pip install --upgrade pip
-COPY ./requirenments.txt .
+COPY /requirenments.txt .
 RUN pip install -r requirenments.txt 
 COPY . .
 
