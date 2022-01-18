@@ -12,4 +12,4 @@ def counter_inc(request):
     else:
         counter.count_num = counter.count_num + 1
     counter.save()
-    return HttpResponse(status = 200)
+    return HttpResponse(status = 200, content = counter.count_num)
