@@ -33,7 +33,7 @@ jobs:
           push: true
           tags: stojanov98/cloud_computing:latecontext
           file: ./project/Dockerfile
-          platform: linux/amd64
+          platforms: linux/amd64
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
