@@ -32,7 +32,7 @@ jobs:
 #           context: .
           push: true
           tags: stojanov98/cloud_computing:latecontext
-          file: ./project/Dockerfile
+          context: ./project
           platforms: linux/amd64
       -
         name: Image digest
