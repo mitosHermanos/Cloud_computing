@@ -7,8 +7,8 @@ services:
         restart: on-failure:10
         ports: 
             - "8000:8000"
-        env_file: 
-            - ../vagrant/vars.env
+        # env_file: 
+        #     - ../vagrant/vars.env
         depends_on: 
             - cloud_db1
         volumes: 
@@ -16,6 +16,9 @@ services:
         environment: 
             DB_HOST: "cloud_db1"
             DB_NAME: "cloud_db1"
+            DB_USER: "admin"   
+            DB_PASS: "admin"
+            SECRET_KEY: "itde^2&op#=p3n-5l&=ky(@3x&l)78&o6b&iyj721yssp(d^fy"
         networks: 
             - cloud_comuting_network
     django2:
@@ -24,8 +27,8 @@ services:
         restart: on-failure:10
         ports: 
             - "8001:8000"
-        env_file: 
-            - ../vagrant/vars.env
+        # env_file: 
+        #     - ../vagrant/vars.env
         depends_on: 
             - cloud_db2
         volumes: 
@@ -33,6 +36,9 @@ services:
         environment: 
             DB_HOST: "cloud_db2"
             DB_NAME: "cloud_db2"
+            DB_USER: "admin"   
+            DB_PASS: "admin"
+            SECRET_KEY: "itde^2&op#=p3n-5l&=ky(@3x&l)78&o6b&iyj721yssp(d^fy"
         networks: 
             - cloud_comuting_network
     cloud_db1:
